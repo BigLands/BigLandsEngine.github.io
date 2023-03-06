@@ -8,7 +8,7 @@ body {
 }
 
 a {
-	color: #5BA817;
+	color: #0072c6;
 	text-decoration: none;
 }
 
@@ -17,7 +17,7 @@ a:hover {
 }
 
 header {
-	background-color: #212121;
+	background-color: #0072c6;
 	color: #fff;
 	padding: 20px;
 }
@@ -47,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-	color: #5BA817;
+	color: #f0f0f0;
 }
 
 main {
@@ -55,7 +55,7 @@ main {
 }
 
 footer {
-	background-color: #212121;
+	background-color: #333;
 	color: #fff;
 	padding: 20px;
 	text-align: center;
