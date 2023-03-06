@@ -14,7 +14,7 @@
 
   
   a {
-	color: #18bc9c;
+	color: #0045ad;
 	text-decoration: none;
   }
   
@@ -23,8 +23,8 @@
   }
   
   header {
-	background-color: #18bc9c;
-	color: #fff;
+	background-color: #1844bc;
+	color: #ffbb00;
 	padding: 20px;
 	display: flex;
 	justify-content: space-between;
@@ -92,8 +92,8 @@
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
-	color: #fff;
-	background-color: #18bc9c;
+	color: #ffbb00;
+	background-color: #00b2df;
 	border: none;
 	border-radius: 5px;
 	transition: all 0.3s ease;
@@ -108,7 +108,15 @@
 	color: #fff;
 	padding: 20px;
 	text-align: center;
-  }
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-right {
+	text-align: right;
+}
+
   
   /* Typography styles */
   h1, h2, h3, h4, h5, h6 {
