@@ -24,6 +24,25 @@ a:hover {
   text-decoration: underline;
 }
 
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+
 header {
   background-color: #333333;
   color: #f2f2f2;
