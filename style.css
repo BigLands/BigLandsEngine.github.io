@@ -104,9 +104,15 @@
   }
   
   footer {
+<<<<<<< HEAD
 	background-color: #0045ad;
 	color: #e5ff00;
 	padding: 10px;
+=======
+	background-color: #18bc9c;
+	color: #fff;
+	padding: 20px;
+>>>>>>> d39a8f85590a3dfc80ddca459e02438a53adf954
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
