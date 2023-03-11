@@ -4,6 +4,32 @@
 	<title>BigLandsEngine</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		footer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			background-color: #333;
+			color: #fff;
+			font-size: 14px;
+		}
+
+		footer img {
+			width: 60px;
+			height: 60px;
+			margin-right: 10px;
+		}
+
+		footer a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		footer a:hover {
+			color: #ccc;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -12,6 +38,7 @@
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="wiki.html">Wiki</a></li>
+				<li><a href="#common-questions">Common Questions</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -20,18 +47,50 @@
 		<section class="hero">
 			<h2>BigLands Engine</h2>
 			<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Download</a>
-
+	
+		</section>
+	
+		<section class="features">
+			<div class="feature-box">
+				<h3>Features</h3>
+				<ul>
+					<li>3D/2D rendering</li>
+					<li>Easy to use</li>
+					<li>C# coding</li>
+				</ul>
+			</div>
+	
+			<div class="feature-box">
+				<h3>Where can I see the code?</h3>
+				<p>Our code is hosted on GitHub:</p>
+				<a href="https://github.com/BigLands/BigLandsEngine" class="btn">GitHub</a>
+			</div>
+	
+			<div class="feature-box">
+				<h3>Where can I see devlogs?</h3>
+				<p>Check out our YouTube channel:</p>
+				<a href="https://www.youtube.com/channel/UCtv5D6PBNgRr4qMXvgcyOXg" class="btn">Devlogs</a>
+			</div>
 		</section>
 
-				<section class="col">
-			<h2>YouTube Channel</h2>
-			<a href="https://www.youtube.com/channel/UCtv5D6PBNgRr4qMXvgcyOXg">
-				<img src="BigLandsEngine-1.png"
-					 alt="YouTube Channel Logo"
-					 width="100"
-					 height="100">
-		</section>
-
+		<section class="faq" id="common-questions"></section>
+			<h2>Common Questions</h2>
+			<details>
+			  <summary>Question 1: What is BigLands Engine?</summary>
+			  <p>BigLands Engine is a game engine designed to be easy to use and with support for both 3D and 2D rendering. It uses C# for scripting.</p>
+			</details>
+			<details>
+			  <summary>Question 2: Where can I download BigLands Engine?</summary>
+			  <p>You can download the latest release of BigLands Engine from our GitHub repository.</p>
+			  <a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Download</a>
+			</details>
+			<details>
+			  <summary>Question 3: Is BigLands Engine free?</summary>
+			  <p>Yes, BigLands Engine is an open-source project released under the MIT license, which means you can use it for free.</p>
+			</details>
+		  </section>
+		  
 	</main>
+
 </body>
 </html>
