@@ -134,14 +134,19 @@ body {
     
     /* Add background color and border radius to links */
     a {
-    background-color: #0077ff;
-    border-radius: 0.25em;
-    padding: 0.25em 0.5em;
-    transition: all 0.2s ease-in-out;
-    }
-    
-    a:hover {
-    background-color: #ff7f50;
+        display: inline-block;
+        padding: 0.25em 0.5em;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-color: #ffd700;
+        border: none;
+        border-radius: 0.25em;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
     
     /* Add hover effect to columns */
