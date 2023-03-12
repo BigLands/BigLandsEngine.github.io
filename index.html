@@ -5,30 +5,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
-		footer {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100px;
-			background-color: #333;
-			color: #fff;
-			font-size: 14px;
-		}
-
-		footer img {
-			width: 60px;
-			height: 60px;
-			margin-right: 10px;
-		}
-
-		footer a {
-			color: #fff;
-			text-decoration: none;
-		}
-
-		footer a:hover {
-			color: #ccc;
-		}
 	</style>
 </head>
 <body>
@@ -36,18 +12,21 @@
 		<h1>BigLandsEngine</h1>
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="wiki.html">Wiki</a></li>
-				<li><a href="#common-questions">Common Questions</a></li>
+				<a href="#" class="btn">Home</a>
+				<a href="wiki.html" class="btn">Wiki</a>
+				<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Download Here</a>
+				<a href="#common-questions" class="btn">Common Questions</a>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
+
 		<section class="hero">
 			<h2>BigLands Engine</h2>
-			<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Download</a>
-	
+			<div class="banner">
+				<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Release 0.1</a>
+			</div>
 		</section>
 	
 		<section class="features">
@@ -72,6 +51,7 @@
 				<a href="https://www.youtube.com/channel/UCtv5D6PBNgRr4qMXvgcyOXg" class="btn">Devlogs</a>
 			</div>
 		</section>
+		  
 
 		<section class="faq" id="common-questions"></section>
 			<h2>Common Questions</h2>
@@ -86,9 +66,10 @@
 			</details>
 			<details>
 			  <summary>Question 3: Is BigLands Engine free?</summary>
-			  <p>Yes, BigLands Engine is an open-source project released under the MIT license, which means you can use it for free.</p>
+			  <p>Yes, BigLands Engine is an open-source project released under no license, which means you can use it for free.</p>
 			</details>
 		  </section>
+
 		  
 	</main>
 
