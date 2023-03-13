@@ -1,108 +1,124 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="shortcut icon" href="BigLandsEngine.png" type="image/x-icon">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Warning</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: 'Open Sans', sans-serif;
-			background-color: #333333;
-			color: #fff;
-		}
-
-		main {
-			height: 100vh;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-		}
-
-		h2 {
-			font-size: 2rem;
-			font-weight: 300;
-			margin-bottom: 1rem;
-			text-align: center;
-			line-height: 1.5;
-		}
-
-		.hero {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 2rem;
-			background-color: rgba(255, 215, 0, 0.8);
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-			text-align: center;
-			max-width: 80%;
-		}
-
-		.btn {
-			display: inline-block;
-			background-color: #ffd700;
-			color: #333333;
-			font-size: 1.2rem;
-			font-weight: 700;
-			padding: 1rem 2rem;
-			border-radius: 5px;
-			text-decoration: none;
-			margin-top: 1rem;
-			transition: background-color 0.3s ease;
-		}
-
-		.btn:hover {
-			background-color: #f5c000;
-		}
-
-		#blackout {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.8);
-			display: none;
-			z-index: 999;
-			animation: fadeOut 1s;
-		}
-
-		@keyframes fadeOut {
-			from {
+	<head>
+		<title>BigLandsEngine</title>
+        <meta charset="UTF-8">
+		<title>Resize on mobile</title>
+		<script type="text/javascript">
+			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+			}
+		</script>		
+		</script>
+		<link rel="shortcut icon" href="BigLandsEngine.png" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fade In Example</title>
+		<style>
+			body {
+				background-color: #000000;
+				color: #ffffff;
+				font-family: sans-serif;
+				font-size: 1.5rem;
 				opacity: 0;
+				visibility: hidden;
+				transition: opacity 1s ease, visibility 0s linear 1s;
 			}
-			to {
+	
+			body.fade-in {
 				opacity: 1;
+				visibility: visible;
+				transition-delay: 0s;
 			}
-		}
+		</style>
+	</head>
+	<body>
+		<script>
+			// Add the "fade-in" class to the body after a short delay
+			setTimeout(function() {
+				document.body.classList.add("fade-in");
+			}, 50);
+		</script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
 	</style>
 </head>
 <body>
+	<header>
+		<h1>BigLandsEngine</h1>
+		<nav>
+			<ul>
+				<a href="#" class="btn">Home</a>
+				<a href="wiki.html" class="btn">Wiki</a>
+				<a href="popup.html" class="btn">Download Here</a>
+				<a href="#common-questions" class="btn">Common Questions</a>
+			</ul>
+		</nav>
+	</header>
+
 	<main>
+
 		<section class="hero">
-			<h2>PLEASE CLICK CONTINUE BUT IF IT JUST DOWNLOADS A FILE ITS FAKE since the code is opensource so is the website it is easy to steal.</h2>
+			<h2>BigLands Engine</h2>
 			<div class="banner">
-				<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">continue</a>
-				<button onclick="goBack()" class="btn">go back</button>
+				<a href="popup.html" class="btn">Release 0.1</a>
 			</div>
 		</section>
-		<div id="blackout" class="fade-out"></div>
+
+		<section class="feature-box">
+			<h2>BIGLANDS ENGINE 0.1 IS OUT NOW!!!!!!!!</h2>
+			<div class="banner">
+				<a href="popup.html" class="btn">Release 0.1</a>
+				<h3>The Frist Release of BigLands Engine is out NOW!</h3>
+				<h3>note: 0.1 is very early build of BigLands Engine and much could change</h3>
+			</div>
+		</section>
+	
+		<section class="features">
+			<div class="feature-box">
+				<h3>Features</h3>
+				<ul>
+					<li>3D/2D rendering</li>
+					<li>Easy to use</li>
+					<li>C# coding</li>
+				</ul>
+			</div>
+	
+			<div class="feature-box">
+				<h3>Where can I see the code?</h3>
+				<p>Our code is hosted on GitHub:</p>
+				<a href="https://github.com/BigLands/BigLandsEngine" class="btn">GitHub</a>
+			</div>
+	
+			<div class="feature-box">
+				<h3>Where can I see devlogs?</h3>
+				<p>Check out our YouTube channel:</p>
+				<a href="https://www.youtube.com/channel/UCtv5D6PBNgRr4qMXvgcyOXg" class="btn">Devlogs</a>
+			</div>
+		</section>
+		  
+
+		<section class="faq" id="common-questions"></section>
+			<h2>Common Questions</h2>
+			<details>
+			  <summary>Question 1: What is BigLands Engine?</summary>
+			  <p>BigLands Engine is a game engine designed to be easy to use and with support for both 3D and 2D rendering. It uses C# for scripting.</p>
+			</details>
+			<details>
+			  <summary>Question 2: Where can I download BigLands Engine?</summary>
+			  <p>You can download the latest release of BigLands Engine from our GitHub repository.</p>
+			  <a href="popup.html" class="btn">Download</a>
+			</details>
+			<details>
+			  <summary>Question 3: Is BigLands Engine free?</summary>
+			  <p>Yes, BigLands Engine is an open-source project released under no license, which means you can use it for free.</p>
+			</details>
+		  </section>
+
+		  
 	</main>
 
-	<script>
-		function goBack() {
-			let blackout = document.getElementById("blackout");
-			blackout.style.display = "block";
-			setTimeout(() => {
-				window.location.href = "index.html";
-			}, 1000);
-		}
-	</script>
 </body>
 </html>
