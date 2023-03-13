@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="BigLandsEngine.png" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Warning</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Open Sans', sans-serif;
+			background-color: #333333;
+			color: #fff;
+		}
+
+		main {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 300;
+			margin-bottom: 1rem;
+			text-align: center;
+			line-height: 1.5;
+		}
+
+		.hero {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 2rem;
+			background-color: rgba(255, 215, 0, 0.8);
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			text-align: center;
+			max-width: 80%;
+		}
+
+		.btn {
+			display: inline-block;
+			background-color: #ffd700;
+			color: #333333;
+			font-size: 1.2rem;
+			font-weight: 700;
+			padding: 1rem 2rem;
+			border-radius: 5px;
+			text-decoration: none;
+			margin-top: 1rem;
+			transition: background-color 0.3s ease;
+		}
+
+		.btn:hover {
+			background-color: #f5c000;
+		}
+
+		#blackout {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+			display: none;
+			z-index: 999;
+			animation: fadeOut 1s;
+		}
+
+		@keyframes fadeOut {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<section class="hero">
+			<h2>PLEASE CLICK CONTINUE BUT IF IT JUST DOWNLOADS A FILE ITS FAKE since the code is opensource so is the website it is easy to steal.</h2>
+			<div class="banner">
+				<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">continue</a>
+				<button onclick="goBack()" class="btn">go back</button>
+			</div>
+		</section>
+		<div id="blackout" class="fade-out"></div>
+	</main>
+
+	<script>
+		function goBack() {
+			let blackout = document.getElementById("blackout");
+			blackout.style.display = "block";
+			setTimeout(() => {
+				window.location.href = "index.html";
+			}, 1000);
+		}
+	</script>
+</body>
+</html>
