@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>BigLandsEngine</title>
+	<head>
+		<title>BigLandsEngine</title>
+		<link rel="shortcut icon" href="BigLandsEngine.png" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fade In Example</title>
+		<style>
+			body {
+				background-color: #000000;
+				color: #ffffff;
+				font-family: sans-serif;
+				font-size: 1.5rem;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 1s ease, visibility 0s linear 1s;
+			}
+	
+			body.fade-in {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 0s;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			// Add the "fade-in" class to the body after a short delay
+			setTimeout(function() {
+				document.body.classList.add("fade-in");
+			}, 50);
+		</script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="01.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
 	</style>
 </head>
@@ -14,7 +44,7 @@
 			<ul>
 				<a href="#" class="btn">Home</a>
 				<a href="wiki.html" class="btn">Wiki</a>
-				<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Download Here</a>
+				<a href="popup.html" class="btn">Download Here</a>
 				<a href="#common-questions" class="btn">Common Questions</a>
 			</ul>
 		</nav>
@@ -25,14 +55,14 @@
 		<section class="hero">
 			<h2>BigLands Engine</h2>
 			<div class="banner">
-				<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Release 0.1</a>
+				<a href="popup.html" class="btn">Release 0.1</a>
 			</div>
 		</section>
 
 		<section class="feature-box">
 			<h2>BIGLANDS ENGINE 0.1 IS OUT NOW!!!!!!!!</h2>
 			<div class="banner">
-				<a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Release 0.1</a>
+				<a href="popup.html" class="btn">Release 0.1</a>
 				<h3>The Frist Release of BigLands Engine is out NOW!</h3>
 				<h3>note: 0.1 is very early build of BigLands Engine and much could change</h3>
 			</div>
@@ -71,7 +101,7 @@
 			<details>
 			  <summary>Question 2: Where can I download BigLands Engine?</summary>
 			  <p>You can download the latest release of BigLands Engine from our GitHub repository.</p>
-			  <a href="https://github.com/BigLands/BigLandsEngine/releases" class="btn">Download</a>
+			  <a href="popup.html" class="btn">Download</a>
 			</details>
 			<details>
 			  <summary>Question 3: Is BigLands Engine free?</summary>
