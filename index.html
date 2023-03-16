@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
-		function getScreenSizeInches() {    
+		<script>
+			function getScreenSizeInches() {    
     var temp =  document.createElement("div")
     temp.style.overflow='hidden';
     temp.style.visibility='hidden';
@@ -11,6 +11,7 @@
     var dpi = temp.offsetWidth / 10;
     return screen.width / dpi + 'x' + screen.height / dpi;
 }
+	<script>
 		<title>BigLandsEngine</title>
 		<meta charset="UTF-8">
 		<title>Resize on mobile</title>	
