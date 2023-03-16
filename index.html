@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script>
-			function getScreenSizeInches() {    
-    var temp =  document.createElement("div")
-    temp.style.overflow='hidden';
-    temp.style.visibility='hidden';
-    document.body.appendChild(temp)
-    temp.style.width = "10in"
-    var dpi = temp.offsetWidth / 10;
-    return screen.width / dpi + 'x' + screen.height / dpi;
-}
-	<script>
 		<title>BigLandsEngine</title>
 		<meta charset="UTF-8">
-		<title>Resize on mobile</title>	
+		<title>Resize on mobile</title>
+		<script type="text/javascript">
+		  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			window.location.href = "mobile.html";
+		  }
+		</script>		
 		</script>
 		<link rel="shortcut icon" href="BigLandsEngine.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
