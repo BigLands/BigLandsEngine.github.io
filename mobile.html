@@ -28,6 +28,20 @@
       #content {
         padding: 10px;
       }
+      /* CSS for mobile responsiveness */
+      @media only screen and (max-width: 600px) {
+        /* Make the header text smaller */
+        #header h1 {
+          font-size: 24px;
+        }
+        /* Center the list items and make the font smaller */
+        #content ul {
+          text-align: center;
+        }
+        #content li {
+          font-size: 18px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -39,6 +53,19 @@
       <ul>
         <li><a href="wiki.html">Wiki</a></li>
         <li><a href="https://github.com/BigLands/BigLandsEngine/releases">Download</a></li>
+      </ul>
+      <!-- Add a section for features -->
+      <h2>Features</h2>
+      <ul>
+        <li>3D/2D rendering</li>
+        <li>Easy to use</li>
+        <li>C# coding</li>
+      </ul>
+      <!-- Add a section for common questions -->
+      <h2>Common Questions</h2>
+      <ul>
+        <li><strong>Where can I see the code?</strong> Our code is hosted on GitHub: <a href="https://github.com/BigLands/BigLandsEngine">https://github.com/BigLands/BigLandsEngine</a></li>
+        <li><strong>Where can I see devlogs?</strong> Check out our YouTube channel: <a href="https://www.youtube.com/channel/...">https://www.youtube.com/channel/...</a></li>
       </ul>
     </div>
   </body>
