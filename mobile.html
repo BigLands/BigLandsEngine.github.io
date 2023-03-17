@@ -1,108 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" href="BigLandsEngine.png" type="image/x-icon">
-	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Warning</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: 'Open Sans', sans-serif;
-			background-color: #333333;
-			color: #fff;
-		}
-
-		main {
-			height: 100vh;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-		}
-
-		h2 {
-			font-size: 2rem;
-			font-weight: 300;
-			margin-bottom: 1rem;
-			text-align: center;
-			line-height: 1.5;
-		}
-
-		.hero {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 2rem;
-			background-color: rgba(255, 215, 0, 0.8);
-			border-radius: 5px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-			text-align: center;
-			max-width: 80%;
-		}
-
-		.btn {
-			display: inline-block;
-			background-color: #ffd700;
-			color: #333333;
-			font-size: 1.2rem;
-			font-weight: 700;
-			padding: 1rem 2rem;
-			border-radius: 5px;
-			text-decoration: none;
-			margin-top: 1rem;
-			transition: background-color 0.3s ease;
-		}
-
-		.btn:hover {
-			background-color: #f5c000;
-		}
-
-		#blackout {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.8);
-			display: none;
-			z-index: 999;
-			animation: fadeOut 1s;
-		}
-
-		@keyframes fadeOut {
-			from {
-				opacity: 0;
-			}
-			to {
-				opacity: 1;
-			}
-		}
-	</style>
+	<title>My Mobile-Friendly Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<header>
+		<h1>BigLandsEngine</h1>
+	</header>
+	
 	<main>
-		<section class="hero">
-			<h2>sorry your on a very limited version of the website momble doesnt look good with desktop.</h2>
-			<div class="banner">
-				<a href="popup.html" class="btn">Download</a>
-				<button onclick="goBack()" class="btn">wiki</button>
-			</div>
-		</section>
-		<div id="blackout" class="fade-out"></div>
-	</main>
+		<main>
 
-	<script>
-		function goBack() {
-			let blackout = document.getElementById("blackout");
-			blackout.style.display = "block";
-			setTimeout(() => {
-				window.location.href = "wiki.html";
-			}, 1000);
-		}
-	</script>
+			<section class="hero">
+				<h2>BigLands Engine</h2>
+				<div class="banner">
+					<a href="download.html" class="btn">Release 0.1</a>
+				</div>
+			</section>
+
+			<a href="#" class="btn">Home</a>
+			<a href="wiki.html" class="btn">Wiki</a>
+			<a href="download.html" class="btn">Download Here</a>
+			<a href="#common-questions" class="btn">Common Questions</a>
+	
+			<section class="feature-box">
+				<h2>BIGLANDS ENGINE 0.1 IS OUT NOW!!!!!!!!</h2>
+				<div class="banner">
+					<a href="download.html" class="btn">Release 0.1</a>
+					<h3>The Frist Release of BigLands Engine is out NOW!</h3>
+					<h3>note: 0.1 is very early build of BigLands Engine and much could change</h3>
+				</div>
+			</section>
+		
+			<section class="features">
+				<div class="feature-box">
+					<h3>Features</h3>
+					<ul>
+						<li>3D/2D rendering</li>
+						<li>Easy to use</li>
+						<li>C# coding</li>
+					</ul>
+				</div>
+		
+				<div class="feature-box">
+					<h3>Where can I see the code?</h3>
+					<p>Our code is hosted on GitHub:</p>
+					<a href="https://github.com/BigLands/BigLandsEngine" class="btn">GitHub</a>
+				</div>
+		
+				<div class="feature-box">
+					<h3>Where can I see devlogs?</h3>
+					<p>Check out our YouTube channel:</p>
+					<a href="https://www.youtube.com/channel/UCtv5D6PBNgRr4qMXvgcyOXg" class="btn">Devlogs</a>
+				</div>
+			</section>
+			  
+	
+			<section class="faq" id="common-questions"></section>
+				<h2>Common Questions</h2>
+				<details>
+				  <summary>Question 1: What is BigLands Engine?</summary>
+				  <p>BigLands Engine is a game engine designed to be easy to use and with support for both 3D and 2D rendering. It uses C# for scripting.</p>
+				</details>
+				<details>
+				  <summary>Question 2: Where can I download BigLands Engine?</summary>
+				  <p>You can download the latest release of BigLands Engine from our GitHub repository.</p>
+				  <a href="popup.html" class="btn">Download</a>
+				</details>
+				<details>
+				  <summary>Question 3: Is BigLands Engine free?</summary>
+				  <p>Yes, BigLands Engine is an open-source project released under no license, which means you can use it for free.</p>
+				</details>
+			  </section>
+	<footer>
+	   <p>Email us at <a href="mailto:contact@biglandsengine.com">contact@biglandsengine.com</a></p>
+	</footer>
+	
+	
 </body>
 </html>

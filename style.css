@@ -13,13 +13,70 @@
     line-height: 1.6;
     color: #999;
   }
+
+  video#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    opacity: 1;
+  }
   
+ 
+
+  .my-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.my-circle::before,
+.my-circle::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid #C1FF72;
+  animation: circle-animation 3s ease-in-out infinite;
+}
+
+.my-circle::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+.my-circle::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  width: 250px;
+  height: 250px;
+}
+
+@keyframes circle-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
   
       /* Columns */
       .col {
         display: flex;
         flex-direction: column;
-        background-color: #000;
+        background-color: #0000006c;
         color: #ffffff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 1.5em;
@@ -41,7 +98,7 @@
   
   
   header {
-	background-color: #333333;
+	background-color: #33333338;
 	color: #f2f2f2;
 	padding: 20px;
 	display: flex;
@@ -104,7 +161,7 @@
   
   .feature-box {
     flex-basis: calc(33.33% - 20px);
-    background-color: #000;
+    background-color: #00000067;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -153,7 +210,7 @@
   }
   
   details {
-    background-color: #000;
+    background-color: #00000065;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -214,12 +271,12 @@
   }
   
   .btn:hover {
-	background-color: #333333;
+	background-color: #3333333a;
 	color: #f2f2f2;
   }
   
   footer {
-	background-color: #333333;
+	background-color: #33333349;
 	color: #f2f2f2;
 	padding: 40px 0;
 	text-align: center;
@@ -263,7 +320,7 @@
   
   /* Dark theme styles */
   body {
-  background-color: #212121;
+  background-color: #21212146;
   color: #f2f2f2;
   }
   
@@ -276,7 +333,7 @@
   }
   
   header {
-  background-color: #333333;
+  background-color: #33333334;
   }
   
   nav a {
