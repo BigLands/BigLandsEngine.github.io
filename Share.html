@@ -120,45 +120,26 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Share Button Code Generator</h1>
-      <form>
-        <label>
-          Button Color:<input type="color" id="color-picker" value="#4CAF50">
-        </label>
-        <label>
-          Link to share:
-          <input type="text" id="share-link" placeholder="https://example.com">
-        </label>
-        <button type="button" id="generate-btn">Generate Code</button>
-      </form>
-      <textarea id="code-output" readonly></textarea>
-    </div>
-    <div class="popup" id="popup">
-      <div class="popup-content">
-        <p>Link copied to clipboard!</p>
-      </div>
-    </div>
+    <h1>Share Button Code Generator</h1>
+    <form>
+      <label>
+        Button Color:
+        <input type="color" id="color" value="#4CAF50">
+      </label>
+      <label>
+        Link URL:
+        <input type="text" id="url" placeholder="Enter link URL">
+      </label>
+      <button type="button" onclick="generateCode()">Generate Code</button>
+    </form>
+    <textarea id="code" readonly></textarea>
     <script>
-      const colorPicker = document.getElementById("color-picker");
-      const shareLinkInput = document.getElementById("share-link");
-      const generateBtn = document.getElementById("generate-btn");
-      const codeOutput = document.getElementById("code-output");
-      const popup = document.getElementById("popup");
-      generateBtn.addEventListener("click", () => {
-    const color = colorPicker.value;
-    const link = shareLinkInput.value;
-    const code = `<a href="${link}" style="background-color: ${color}; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Share</a>`;
-
-    codeOutput.value = code;
-    codeOutput.select();
-    document.execCommand("copy");
-
-    popup.classList.add("show");
-    setTimeout(() => {
-      popup.classList.remove("show");
-    }, 2000);
-  });
-</script>
-</body>
+      function generateCode() {
+        var color = document.getElementById('color').value;
+        var url = document.getElementById('url').value;
+        var code = '<button style="background-color: ' + color + '; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onclick="var dummy=document.createElement(\'input\'),text=\'' + url + '\';document.body.appendChild(dummy);dummy.value=text;dummy.select();document.execCommand(\'copy\');document.body.removeChild(dummy);alert(\'Link copied to clipboard!\')">' + "Share" + '</button>';
+        document.getElementById('code').value = code;
+      }
+    </script>
+  </body>
 </html>
