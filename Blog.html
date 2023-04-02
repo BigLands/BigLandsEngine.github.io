@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog Embedded Code Generator</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+			box-sizing: border-box;
+		}
+
+		h1 {
+			font-size: 32px;
+			margin-top: 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+
+		label {
+			flex-basis: 100%;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		input[type="text"], select {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+
+		textarea {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			box-sizing: border-box;
+			min-height: 150px;
+			resize: vertical;
+		}
+
+		.btn {
+			padding: 10px 20px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		.btn:hover {
+			background-color: #0069d9;
+		}
+
+		#embedded-code-container {
+			background-color: #f0f0f0;
+			padding: 20px;
+			border-radius: 5px;
+			margin-top: 20px;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			word-wrap: break-word;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Blog Embedded Code Generator</h1>
+
+		<form>
+			<label for="blog-title">Blog Title:</label>
+			<input type="text" id="blog-title" required>
+
+			<label for="blog-image">Blog Image URL:</label>
+			<input type="text" id="blog-image" required>
+
+			<label for="blog-content">Blog Content:</label>
+			<textarea id="blog-content" required></textarea>
+
+			<label for="blog-bg-color">Background Color:</label>
+			<input type="color" id="blog-bg-color" value="#ffffff">
+
+			<label for="blog-text-color">Text Color:</label>
+			<input type="color" id="blog-text-color" value="#000000">
+
+			<label for="blog-border-radius">Border Radius:</label>
+			<input type="number" id="blog-border-radius" min="0" max="50" step="1" value="5">
+
+			<label for="blog-font-family">Font Family:</label>
+            <select id="blog-font-family">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Helvetica Neue', Helvetica, Arial, sans-serif">Helvetica Neue</option>
+            <option value="'Open Sans', sans-serif">Open Sans</option>
+            <option value="'Roboto', sans-serif">Roboto</option>
+            <option value="'Lato', sans-serif">Lato</option>
+            </select>
+            <button type="submit" class="btn">Generate Embedded Code</button>
+        </form>
+    
+        <div id="embedded-code-container"></div>
+    </div>
+    
+    <script>
+        const form = document.querySelector('form');
+        const embeddedCodeContainer = document.querySelector('#embedded-code-container');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            // Get form values
+            const blogTitle = document.querySelector('#blog-title').value;
+            const blogImage = document.querySelector('#blog-image').value;
+            const blogContent = document.querySelector('#blog-content').value;
+            const blogBgColor = document.querySelector('#blog-bg-color').value;
+            const blogTextColor = document.querySelector('#blog-text-color').value;
+            const blogBorderRadius = document.querySelector('#blog-border-radius').value;
+            const blogFontFamily = document.querySelector('#blog-font-family').value;
+    
+            // Generate embedded code
+            const embeddedCode = `<div style="background-color: ${blogBgColor}; color: ${blogTextColor}; padding: 20px; border-radius: ${blogBorderRadius}px; font-family: ${blogFontFamily};">
+                <h2 style="margin-top: 0;">${blogTitle}</h2>
+                <img src="${blogImage}" alt="${blogTitle}" style="max-width: 100%; margin-bottom: 20px;">
+                <p>${blogContent}</p>
+            </div>`;
+    
+            // Display generated code
+            embeddedCodeContainer.innerHTML = `
+                <h3>Generated Embedded Code:</h3>
+                <textarea readonly style="width: 100%; height: 200px;">${embeddedCode}</textarea>
+            `;
+        });
+    </script>
+</body>
+</html>    
